@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+/* || REST */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --BODY-BG: #FFFFFF;
+  --TITLE-BG: #512051;
+  --TITLE-SUBTEXT-CO: #927B91;
+  --REVIEW-BG: #F7F2F7;
+  --STATUS: #EE69A4;
+  --TEXT: #FFFFFF;
+
+
+  /* TYPOGRAPHY */
+  --FF: "League Spartan", serif;
+  
+  /* MOBILE TEXT STYLE */
+  --TITLE-MOB: bold 2.5rem/2rem var(--FF);
+  --TITLE-SUBTEXT-MOB: 500 1.1875rem/1.5625rem var(--FF);
+  
+  /* DESKTOP TEXT STYLE */
+  --TITLE: bold 3.6875rem/3rem var(--FF);
+  --TITLE-SUBTEXT: 500 1.1875rem/1.5625rem var(--FF);
+  --REVIEW-NAME: bold 1.0625rem var(--FF);
+  --STATUS-NAME: normal 1.0625rem var(--FF);
+  --REVIEW-CONTENT: 500 1.0625rem/1.375rem var(--FF);
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  place-content: center;
+  background-color: var(--BODY-BG);
+  background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center, bottom center;
+  background-size: 374px 232px, 375px 503px;
+}
+
+/* SOCIAL CARD */
+.social-card {
+    max-width: 327px;
+    min-height: 1349px;
+    margin: 5.125rem 0rem 6.1875rem;
+    display: flex;
+    flex-flow: column;
+}
+
+/* SOCIAL CARD HERO */
+.social-card__hero {
+    width: 100%;
+    height: 219px;
+    margin-bottom: 2.4375rem;
+}
+
+.social-card__hero-title {
+    font: var(--TITLE-MOB);
+    color: var(--TITLE-BG);
+    letter-spacing: -0.0894rem;
+    margin-bottom: 1.0625rem;
+}
+
+.social-card__hero-subtitle {
+    width: 325px;
+    font: var(--TITLE-SUBTEXT-MOB);
+    color: var(--TITLE-SUBTEXT-CO);
+    letter-spacing: -0.0394rem;
+}
+
+/* SOCIAL CARD RATINGS */
+.social-card__ratings-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    margin-bottom: 3.0625rem;
+}
+
+.social-card__ratings {
+    width: 100%;
+    background-color: var(--REVIEW-BG);
+    border-radius: .5rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: .9375rem;
+    padding: 1rem 4.125rem .9375rem 4.75rem;
+}
+
+.social-card__rating-icons {
+    display: flex;
+    gap: .5rem;
+}
+
+.social-card__rating-label {
+    font: var(--REVIEW-NAME);
+    color: var(--TITLE-BG);
+}
+
+/* REVIEW CONTENT */
+.social-card__review-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+}
+
+.social-card__reviews {
+    width: 100%;
+    height: 248px;
+    background-color: var(--TITLE-BG);
+    border-radius: .5rem;
+    display: flex;
+    flex-flow: column;
+    gap: 1.4375rem;
+    padding: 2.3125rem 2rem 2.375rem 2rem;
+}
+
+.social-card__reviewer-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.4375rem;
+}
+
+.reviewer-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.reviewer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile {
+    display: flex;
+    flex-flow: column;
+    gap: .25rem;
+}
+
+.profile-name {
+    font: var(--REVIEW-NAME);
+    color: var(--TEXT);
+}
+
+.profile-status {
+    font: var(--STATUS-NAME);
+    color: var(--STATUS);
+}
+
+.social-card__review-content {
+    font: var(--REVIEW-CONTENT);
+    color: var(--TEXT);
+    letter-spacing: -0.0187rem;
+}
